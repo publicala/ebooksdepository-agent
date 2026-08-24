@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "ebooksdepository": {
+      "type": "streamable-http",
+      "url": "https://ebooksdepository.com/mcp",
+      "description": "Search 500,000+ ebooks and audiobooks and find the independent bookshops that sell each title. Anonymous and read-only."
+    },
+    "ebooksdepository-docs": {
+      "type": "streamable-http",
+      "url": "https://ebooksdepository.com/mcp/docs",
+      "description": "Search and read the EbooksDepository agent and API documentation. Anonymous and read-only."
+    }
+  }
+}
