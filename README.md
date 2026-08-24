@@ -25,6 +25,25 @@ Streamable HTTP endpoints directly:
 - Catalog: `https://ebooksdepository.com/mcp`
 - Documentation: `https://ebooksdepository.com/mcp/docs`
 
+## JavaScript SDK and CLI
+
+The package is ready to publish as `ebooksdepository` once npm credentials are
+configured for the official account:
+
+```bash
+npm install ebooksdepository
+npx ebooksdepository search "Ursula K. Le Guin" --lang en
+```
+
+```js
+import { ebooksdepository } from "ebooksdepository";
+
+const result = await ebooksdepository.search("Ursula K. Le Guin", {
+  lang: "en",
+  limit: 10
+});
+```
+
 Discovery and contracts:
 
 - Developer portal: <https://ebooksdepository.com/developers>

@@ -1,0 +1,51 @@
+{
+  "name": "ebooksdepository",
+  "version": "0.1.0",
+  "description": "Official JavaScript SDK and CLI for the free EbooksDepository book search API",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "bin": {
+    "ebooksdepository": "./bin/ebooksdepository.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/publicala/ebooksdepository-agent.git"
+  },
+  "homepage": "https://ebooksdepository.com/developers",
+  "bugs": {
+    "url": "https://github.com/publicala/ebooksdepository-agent/issues"
+  },
+  "keywords": [
+    "ebooks",
+    "audiobooks",
+    "bookshops",
+    "books",
+    "api",
+    "cli"
+  ],
+  "author": "EbooksDepository <support@publica.la> (https://ebooksdepository.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
