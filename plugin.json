@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ebooksdepository",
   "displayName": "EbooksDepository",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Find where to buy 500,000+ ebooks and audiobooks from independent bookshops and read the public developer documentation.",
   "author": {
     "name": "EbooksDepository",

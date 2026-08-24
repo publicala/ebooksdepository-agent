@@ -4,7 +4,7 @@ description: Find ebooks and audiobooks and the independent bookshops that sell 
 license: MIT
 metadata:
   author: EbooksDepository
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://ebooksdepository.com
 ---
 
@@ -16,7 +16,7 @@ find every indexed independent bookshop that sells a title.
 ## Preferred workflow
 
 1. Call the anonymous Streamable HTTP MCP server at
-   `https://ebooksdepository.com/mcp`.
+   `https://ebooksdepository.com/api/mcp`.
 2. Use `search_books` for a title, author, or publisher.
 3. Use `get_book` with the returned slug when full metadata and bookshop links
    are needed.
@@ -30,7 +30,7 @@ GET https://ebooksdepository.com/api/v1/search?q={query}&lang={code}&limit={1-50
 ```
 
 The endpoint needs no key. Its contract is
-`https://ebooksdepository.com/openapi.json`; documentation is at
+`https://ebooksdepository.com/api/openapi.yaml`; documentation is at
 `https://ebooksdepository.com/api.md`.
 
 ## Rules

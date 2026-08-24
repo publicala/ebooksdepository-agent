@@ -3,12 +3,12 @@
   "mcpServers": {
     "ebooksdepository": {
       "type": "streamable-http",
-      "url": "https://ebooksdepository.com/mcp",
+      "url": "https://ebooksdepository.com/api/mcp",
       "description": "Search 500,000+ ebooks and audiobooks and find the independent bookshops that sell each title. Anonymous and read-only."
     },
     "ebooksdepository-docs": {
       "type": "streamable-http",
-      "url": "https://ebooksdepository.com/mcp/docs",
+      "url": "https://ebooksdepository.com/api/mcp/docs",
       "description": "Search and read the EbooksDepository agent and API documentation. Anonymous and read-only."
     }
   }

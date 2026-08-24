@@ -22,8 +22,10 @@ The skill is also served directly at
 Copy the servers from [`mcp.json`](./mcp.json) into an MCP host, or use these
 Streamable HTTP endpoints directly:
 
-- Catalog: `https://ebooksdepository.com/mcp`
-- Documentation: `https://ebooksdepository.com/mcp/docs`
+- Catalog: `https://ebooksdepository.com/api/mcp`
+- Documentation: `https://ebooksdepository.com/api/mcp/docs`
+
+The conventional `/mcp` and `/mcp/docs` addresses remain compatible aliases.
 
 ## JavaScript SDK and CLI
 
@@ -47,7 +49,8 @@ const result = await ebooksdepository.search("Ursula K. Le Guin", {
 Discovery and contracts:
 
 - Developer portal: <https://ebooksdepository.com/developers>
-- OpenAPI 3.1: <https://ebooksdepository.com/openapi.json>
+- OpenAPI 3.1 YAML: <https://ebooksdepository.com/api/openapi.yaml>
+- OpenAPI 3.1 JSON: <https://ebooksdepository.com/api/openapi.json>
 - Agent guide: <https://ebooksdepository.com/guide.md>
 - MCP server card: <https://ebooksdepository.com/.well-known/mcp/server-card.json>
 - Agentic Resource Discovery catalog: <https://ebooksdepository.com/.well-known/ai-catalog.json>
