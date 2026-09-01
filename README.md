@@ -10,11 +10,11 @@ The surfaces are anonymous, read-only, and free. EbooksDepository does not
 sell books or process payments. Store offers are freshness-stamped snapshots,
 not a cheapest-store ranking; missing prices are never estimated.
 
-## Claude plugin
+## Universal plugin
 
-This repository is also the official EbooksDepository plugin for Claude Code
-and Claude Cowork. It bundles three focused skills with the published
-EbooksDepository connector:
+This repository is also the official EbooksDepository plugin for ChatGPT,
+Codex, Claude Code, and Claude Cowork. It bundles three focused skills with
+the published EbooksDepository MCP server:
 
 - `ebooksdepository` — route general book-discovery questions safely.
 - `find-digital-books` — find ebooks and audiobooks and inspect store offers.
@@ -25,6 +25,7 @@ Validate and test the plugin locally:
 ```bash
 claude plugin validate . --strict
 claude --plugin-dir .
+jq empty chatgpt-app-submission.json
 ```
 
 ## Install the skill
