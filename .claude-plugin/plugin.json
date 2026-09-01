@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ebooksdepository",
+  "displayName": "EbooksDepository",
+  "version": "1.0.0",
+  "description": "Find ebooks and audiobooks, see which independent bookshops carry them, inspect fresh store offers when available, and browse bookshops by country.",
+  "author": {
+    "name": "EbooksDepository",
+    "email": "support@publica.la",
+    "url": "https://ebooksdepository.com"
+  },
+  "homepage": "https://ebooksdepository.com/developers",
+  "repository": "https://github.com/publicala/ebooksdepository-agent",
+  "license": "MIT",
+  "keywords": [
+    "books",
+    "ebooks",
+    "audiobooks",
+    "bookshops",
+    "book-discovery",
+    "independent-bookshops"
+  ]
+}
