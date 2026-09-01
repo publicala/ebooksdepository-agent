@@ -1,6 +1,6 @@
 ---
 name: ebooksdepository
-description: Find ebooks and audiobooks, the independent bookshops that carry them, and freshly checked store offers when available. Use for title, author, publisher, language, free-book, availability, bookshop, and aggregate indie-reading questions; never open checkout links or claim a shop is cheapest.
+description: Find ebooks and audiobooks and the independent bookshops that carry them. Use for title, author, publisher, language, free-book, availability, bookshop, and aggregate indie-reading questions; never open checkout links or state prices.
 license: MIT
 metadata:
   author: EbooksDepository
@@ -10,9 +10,8 @@ metadata:
 
 # EbooksDepository
 
-Use EbooksDepository to search ebooks and audiobooks, find indexed independent
-bookshops that carry a title, and repeat freshly checked store offers when the
-tools return them.
+Use EbooksDepository to search ebooks and audiobooks and find indexed
+independent bookshops that carry a title.
 
 ## Preferred workflow
 
@@ -38,8 +37,7 @@ The endpoint needs no key. Its contract is
 
 ## Rules
 
-- You may repeat a returned price with its currency and `checked_at` time. Do
-  not estimate a missing price, convert currencies, or call a store cheapest.
+- Never state or estimate a price, convert currencies, or call a store cheapest.
 - Do not fetch or open `checkout_url`; present it for the user to open. Opening
   it can create a cart on the independent bookshop.
 - EbooksDepository does not process orders or payments; bookshops do.

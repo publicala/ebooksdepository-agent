@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json",
+  "schema_version": 1,
+  "app_info": {
+    "display_name": "EbooksDepository",
+    "subtitle": "Find ebooks and audiobooks",
+    "description": "EbooksDepository helps users search for ebooks and audiobooks by title, author, publisher, or language, inspect catalog metadata and available formats, and discover the independent bookshops that carry each title. EbooksDepository is anonymous and read-only: it does not create carts, place orders, process payments, or state or estimate prices.",
+    "category": "SHOPPING"
+  },
+  "tools": {
+    "search_books": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Searches the public catalog and returns book and bookshop availability data without modifying any system.",
+        "open_world_justification": "Only retrieves public catalog data and does not publish content, submit forms, or change an external system.",
+        "destructive_justification": "Does not delete, overwrite, purchase, message, or perform any irreversible action."
+      }
+    },
+    "get_book": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Retrieves one active book, its public metadata, and bookshop links without changing data.",
+        "open_world_justification": "Returns public information and checkout URLs for the user to open but does not fetch those URLs or alter a store.",
+        "destructive_justification": "Does not create a cart, place an order, process payment, delete data, or perform another irreversible action."
+      }
+    },
+    "list_bookshops": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Lists public directory entries for independent bookshops without modifying the directory or any shop.",
+        "open_world_justification": "Only retrieves public bookshop data and does not publish, message, submit, or change an external system.",
+        "destructive_justification": "Does not delete, overwrite, purchase, revoke access, or perform any irreversible action."
+      }
+    }
+  },
+  "test_cases": [
+    {
+      "description": "Search for an ebook by title.",
+      "user_prompt": "Find ebook editions of One Hundred Years of Solitude.",
+      "file_attachment_urls": null,
+      "tools_triggered": "search_books",
+      "expected_output": "Returns relevant catalog matches with titles, authors, formats, canonical EbooksDepository pages, and the independent bookshops carrying each title.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Search by author with a language filter.",
+      "user_prompt": "Find Spanish-language ebooks or audiobooks by Isabel Allende.",
+      "file_attachment_urls": null,
+      "tools_triggered": "search_books",
+      "expected_output": "Returns Spanish-language catalog matches by the requested author and includes bookshop availability without stating or estimating prices.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Retrieve full details for a known catalog slug.",
+      "user_prompt": "Show me the full details and bookshop options for the book with slug gabriel-garcia-marquez-1715900437.",
+      "file_attachment_urls": null,
+      "tools_triggered": "get_book",
+      "expected_output": "Returns the matching book's metadata, formats, canonical page, carrying bookshops, and links for the user to open.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Handle a catalog slug that does not exist.",
+      "user_prompt": "Look up the book with slug this-book-does-not-exist.",
+      "file_attachment_urls": null,
+      "tools_triggered": "get_book",
+      "expected_output": "Clearly reports that no active book has that slug and explains that valid slugs come from search results or publication page URLs.",
+      "expected_output_url": null
+    },
+    {
+      "description": "List independent bookshops in one country.",
+      "user_prompt": "List up to 10 independent ebook bookshops in Spain.",
+      "file_attachment_urls": null,
+      "tools_triggered": "list_bookshops",
+      "expected_output": "Returns up to 10 directory-listed Spanish bookshops with names, catalog sizes, storefront URLs, and EbooksDepository profile pages.",
+      "expected_output_url": null
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "description": "Do not trigger for publishing or uploading a user's own book.",
+      "user_prompt": "Upload my EPUB and publish it to online bookstores.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because it cannot upload, publish, or distribute books.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for autonomous checkout and payment.",
+      "user_prompt": "Buy this ebook for me now and charge my credit card.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because it cannot create orders, collect payment details, or process payments.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for manuscript summarization.",
+      "user_prompt": "Summarize the manuscript I attached and suggest edits to chapter three.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because it searches public catalog records and does not read or edit user manuscripts.",
+      "expected_output_url": null
+    }
+  ]
+}

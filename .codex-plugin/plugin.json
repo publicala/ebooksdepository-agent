@@ -1,0 +1,42 @@
+{
+  "name": "ebooksdepository",
+  "version": "1.2.0",
+  "description": "Find ebooks and audiobooks and the independent bookshops that carry them.",
+  "author": {
+    "name": "Publica.la",
+    "email": "support@publica.la",
+    "url": "https://publica.la"
+  },
+  "homepage": "https://ebooksdepository.com/developers",
+  "repository": "https://github.com/publicala/ebooksdepository-agent",
+  "license": "MIT",
+  "keywords": [
+    "books",
+    "ebooks",
+    "audiobooks",
+    "bookshops",
+    "book-discovery",
+    "independent-bookshops"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "EbooksDepository",
+    "shortDescription": "Find ebooks and audiobooks",
+    "longDescription": "Search ebooks and audiobooks by title, author, publisher, or language; inspect catalog metadata and formats; and discover the independent bookshops that carry each title. EbooksDepository is a read-only index and never creates carts, places orders, processes payments, or states or estimates prices.",
+    "developerName": "Publica.la",
+    "category": "Shopping",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://ebooksdepository.com",
+    "privacyPolicyURL": "https://ebooksdepository.com/es/pages/privacy",
+    "termsOfServiceURL": "https://ebooksdepository.com/es/pages/terms",
+    "defaultPrompt": [
+      "Find an ebook by Ursula K. Le Guin.",
+      "Which independent bookshops carry this title?",
+      "Show me audiobook bookshops in Mexico."
+    ]
+  }
+}

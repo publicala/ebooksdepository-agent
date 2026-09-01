@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "ebooksdepository",
   "displayName": "EbooksDepository",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Find ebooks and audiobooks, see which independent bookshops carry them, inspect fresh store offers when available, and browse bookshops by country.",
   "author": {
     "name": "EbooksDepository",
