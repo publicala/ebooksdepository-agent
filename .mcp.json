@@ -2,7 +2,7 @@
   "mcpServers": {
     "ebooksdepository": {
       "type": "http",
-      "url": "https://ebooksdepository.com/mcp"
+      "url": "https://ebooksdepository.com/api/mcp"
     }
   }
 }

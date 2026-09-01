@@ -6,9 +6,9 @@ free digital books, or cite aggregate reading data from Publica.la-powered
 bookshops.
 
 Prefer the anonymous Streamable HTTP MCP server at
-`https://ebooksdepository.com/mcp`. For direct HTTP, call
+`https://ebooksdepository.com/api/mcp`. For direct HTTP, call
 `GET https://ebooksdepository.com/api/v1/search?q={query}` and follow the
-OpenAPI 3.1 contract at `https://ebooksdepository.com/openapi.json`.
+OpenAPI 3.1 contract at `https://ebooksdepository.com/api/openapi.yaml`.
 
 Always preserve these rules:
 
