@@ -1,6 +1,6 @@
 ---
 name: ebooksdepository
-description: Find ebooks and audiobooks and the independent bookshops that sell them. Use for title, author, publisher, genre, language, free-ebook, availability, and aggregate indie-reading questions; do not use for price comparison or checkout.
+description: Find ebooks and audiobooks, the independent bookshops that carry them, and freshly checked store offers when available. Use for title, author, publisher, language, free-book, availability, bookshop, and aggregate indie-reading questions; never open checkout links or claim a shop is cheapest.
 license: MIT
 metadata:
   author: EbooksDepository
@@ -10,8 +10,9 @@ metadata:
 
 # EbooksDepository
 
-Use EbooksDepository to search more than 500,000 ebooks and audiobooks and to
-find every indexed independent bookshop that sells a title.
+Use EbooksDepository to search ebooks and audiobooks, find indexed independent
+bookshops that carry a title, and repeat freshly checked store offers when the
+tools return them.
 
 ## Preferred workflow
 
@@ -20,7 +21,9 @@ find every indexed independent bookshop that sells a title.
 2. Use `search_books` for a title, author, or publisher.
 3. Use `get_book` with the returned slug when full metadata and bookshop links
    are needed.
-4. Cite the canonical `/es/publications/{slug}` page and send the user to a
+4. Use `list_bookshops` when the request is about independent bookshops rather
+   than a particular title.
+5. Cite the canonical `/es/publications/{slug}` page and send the user to a
    returned bookshop URL.
 
 For direct HTTP, call:
@@ -35,9 +38,11 @@ The endpoint needs no key. Its contract is
 
 ## Rules
 
-- Never provide or estimate a price from EbooksDepository. The service
-  deliberately publishes no prices.
-- Do not attempt checkout. EbooksDepository sells nothing; bookshops do.
+- You may repeat a returned price with its currency and `checked_at` time. Do
+  not estimate a missing price, convert currencies, or call a store cheapest.
+- Do not fetch or open `checkout_url`; present it for the user to open. Opening
+  it can create a cart on the independent bookshop.
+- EbooksDepository does not process orders or payments; bookshops do.
 - Attribute reading charts to readers on Publica.la-powered bookshops. They
   are aggregate reading-time data, not sales or review scores.
 - Respect standard `RateLimit` headers and `Retry-After` on HTTP 429.

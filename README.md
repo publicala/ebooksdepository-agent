@@ -1,12 +1,31 @@
 # EbooksDepository for AI agents
 
 Official public agent integrations for
-[EbooksDepository](https://ebooksdepository.com): search 500,000+ ebooks and
-audiobooks, find the independent bookshops that sell each title, and read the
-developer documentation.
+[EbooksDepository](https://ebooksdepository.com): search ebooks and
+audiobooks, find the independent bookshops that carry each title, inspect
+fresh store offers when available, browse bookshops, and read the developer
+documentation.
 
 The surfaces are anonymous, read-only, and free. EbooksDepository does not
-sell books and does not publish or compare prices.
+sell books or process payments. Store offers are freshness-stamped snapshots,
+not a cheapest-store ranking; missing prices are never estimated.
+
+## Claude plugin
+
+This repository is also the official EbooksDepository plugin for Claude Code
+and Claude Cowork. It bundles three focused skills with the published
+EbooksDepository connector:
+
+- `ebooksdepository` — route general book-discovery questions safely.
+- `find-digital-books` — find ebooks and audiobooks and inspect store offers.
+- `find-independent-bookshops` — browse indexed bookshops by country.
+
+Validate and test the plugin locally:
+
+```bash
+claude plugin validate . --strict
+claude --plugin-dir .
+```
 
 ## Install the skill
 
