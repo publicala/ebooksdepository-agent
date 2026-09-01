@@ -38,13 +38,13 @@ The skill is also served directly at
 
 ## MCP
 
-Copy the servers from [`mcp.json`](./mcp.json) into an MCP host, or use these
-Streamable HTTP endpoints directly:
+Copy the server from [`mcp.json`](./mcp.json) into an MCP host, or use the
+Streamable HTTP endpoint directly:
 
-- Catalog: `https://ebooksdepository.com/api/mcp`
-- Documentation: `https://ebooksdepository.com/api/mcp/docs`
+- EbooksDepository: `https://ebooksdepository.com/mcp`
 
-The conventional `/mcp` and `/mcp/docs` addresses remain compatible aliases.
+Human- and agent-readable documentation is at
+`https://ebooksdepository.com/guide.md`.
 
 ## JavaScript SDK and CLI
 
