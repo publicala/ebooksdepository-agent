@@ -17,7 +17,7 @@ tools return them.
 ## Preferred workflow
 
 1. Call the anonymous Streamable HTTP MCP server at
-   `https://ebooksdepository.com/api/mcp`.
+   `https://ebooksdepository.com/mcp`.
 2. Use `search_books` for a title, author, or publisher.
 3. Use `get_book` with the returned slug when full metadata and bookshop links
    are needed.
