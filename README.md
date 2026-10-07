@@ -49,6 +49,10 @@ Human- and agent-readable documentation is at
 
 ## JavaScript SDK and CLI
 
+The CLI source lives in `scripts/ebooksdepository.js`; npm exposes it as the
+`ebooksdepository` command. Keep the repository free of a top-level `bin/`
+directory, which prevents installation in Claude apps and Cowork.
+
 The package is ready to publish as `ebooksdepository` once npm credentials are
 configured for the official account:
 
